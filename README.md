@@ -5,7 +5,7 @@ May 23rd, 2021.
 Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+This project uses data on bike share for the first six months of 2017 for three cities (Chicago, New York and Washington) and allows the user to get statistics based on their input.
 
 ### Files used
 Include the files used
