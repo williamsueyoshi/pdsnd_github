@@ -17,7 +17,7 @@ def valid_input(display_message, valid_inputs):
         (list) valid_inputs - list containing the valid options for input
 
     Returns:
-        (str) user_input - message inserted by the user
+        (str) user_input - message inserted by the user, lower cased
     """
 
     # makes every item in the "valid_inputs" list lower case
