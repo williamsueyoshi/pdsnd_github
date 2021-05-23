@@ -9,6 +9,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 def valid_input(display_message, valid_inputs):
     """
     Keeps asking user for input until a valid one is received.
+    Input is case insensitive.
 
     Args:
         (str) display_message - message to be displayed for the user when
@@ -16,8 +17,11 @@ def valid_input(display_message, valid_inputs):
         (list) valid_inputs - list containing the valid options for input
 
     Returns:
-        (str) user_input - message inserted by the user
+        (str) user_input - message inserted by the user, lower cased
     """
+
+    # makes every item in the "valid_inputs" list lower case
+    valid_inputs = [list_item.lower() for list_item in valid_inputs]
 
     while True: #keeps asking the user for a valid input
         try:
@@ -25,11 +29,11 @@ def valid_input(display_message, valid_inputs):
         except:
             print('\nInvalid Input')
         else:
-            if user_input in valid_inputs:
+            if user_input.lower() in valid_inputs:
                 break
             print('\nInvalid Input')
 
-    return user_input
+    return user_input.lower()
 
 
 def get_filters():
