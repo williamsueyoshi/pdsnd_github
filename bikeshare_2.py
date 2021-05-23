@@ -9,6 +9,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 def valid_input(display_message, valid_inputs):
     """
     Keeps asking user for input until a valid one is received.
+    Input is case insensitive.
 
     Args:
         (str) display_message - message to be displayed for the user when
