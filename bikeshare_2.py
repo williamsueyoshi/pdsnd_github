@@ -19,17 +19,20 @@ def valid_input(display_message, valid_inputs):
         (str) user_input - message inserted by the user
     """
 
+    # makes every item in the "valid_inputs" list lower case
+    valid_inputs = [list_item.lower() for list_item in valid_inputs]
+
     while True: #keeps asking the user for a valid input
         try:
             user_input = input('\n' + display_message)
         except:
             print('\nInvalid Input')
         else:
-            if user_input in valid_inputs:
+            if user_input.lower() in valid_inputs:
                 break
             print('\nInvalid Input')
 
-    return user_input
+    return user_input.lower()
 
 
 def get_filters():
